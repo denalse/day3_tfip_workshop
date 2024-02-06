@@ -18,15 +18,15 @@ public class AppTest {
         assertTrue(true);
     }
 
-    // @Test
-    // public void listAllUsers() {
-    //     ShoppingCartDB db = new ShoppingCartDB("cartdb");
-    //     List<String> users = db.listUsers(); //create method in shoppingcartdb
-    //     System.out.println(!users.isEmpty());
+    @Test
+    public void listAllUsers() {
+        ShoppingCartDB db = new ShoppingCartDB("cartdb");
+        List<String> users = db.listUsers(); //create method in shoppingcartdb
+        System.out.println(!users.isEmpty());
 
-    //     if (!users.isEmpty()) { 
-    //         System.out.println("not empty");
-    //     }
-    //     assertTrue(!users.isEmpty());
-    // }
+        if (!users.isEmpty()) { 
+            System.out.println("not empty");
+        }
+        assertTrue(!users.isEmpty());
+    }
 }

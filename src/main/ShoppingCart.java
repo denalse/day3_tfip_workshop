@@ -1,9 +1,11 @@
+package main;
+
 import java.io.Console;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class App {
+public class ShoppingCart {
     public static void main(String[] args) throws Exception {
         System.out.println("Welcome to your shopping cart! :>");
     
@@ -39,6 +41,7 @@ public class App {
                 while(scan.hasNext()) { 
                     data = scan.next();
                     myCart.add(data);
+                    System.out.println(data + "added to cart");
                 }
                 scan.close();
             }
@@ -58,12 +61,18 @@ public class App {
 
                     if (index < myCart.size()) {
                         myCart.remove(index);
+                        //System.out.println( + "added to cart");
                     } else {
                         System.err.println("Incorrect item index ");
                     }
                 }
              scan.close();
 
+            }
+
+            if (input.startsWith("save")) {
+            
+                
             }
         }
 

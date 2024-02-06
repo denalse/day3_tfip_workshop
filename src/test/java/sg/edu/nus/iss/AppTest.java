@@ -1,4 +1,4 @@
-package $package;
+package sg.edu.nus.iss;
 
 import static org.junit.Assert.assertTrue;
 

@@ -1,4 +1,4 @@
-package $package;
+package sg.edu.nus.iss;
 
 /**
  * Hello world!

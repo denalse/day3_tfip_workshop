@@ -66,15 +66,17 @@ public class Session {
                     }
                     break;
                 case LOGIN: // need help..
-                    // if (currentCart.getName() == term[1]) {
-                    // if (currentCart.getItemList() == null) {
-                    // System.out.println(term[1] + ", your card is empty..");
-                    // } else {
-                    // System.out.println(term[1] + ", your card contains the following items:");
-                    // printAllItems(currentCart.getItemList());
-                    // }
-                    // } else {
                     currentCart = new ShoppingCart(term[1]);
+                    ShoppingCart exisitngCart = repository.load(currentCart.getName());
+                    if(exisitngCart != null){
+                        if (exisitngCart.getItemList().size() == 0){
+                            System.out.println(term[1] + ", your cart is empty");
+                        }else{
+                            System.out.println(term[1] + ", your cart has the following items:");
+                            printAllItems(currentCart.getItemList());
+                        }
+                    }
+                    
                     // }
                     break;
                 case SAVE:
@@ -100,7 +102,7 @@ public class Session {
         }
 
         for (String item : items) {
-            System.out.printf("%d %s.\n", (items.indexOf(item) + 1), item);
+            System.out.printf("%d. %s\n", (items.indexOf(item) + 1), item);
         }
 
     }
